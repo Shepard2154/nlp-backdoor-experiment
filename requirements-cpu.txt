@@ -1,11 +1,7 @@
-# PyTorch with CUDA 12.1 wheels (NVIDIA driver must support CUDA 12.x — see `nvidia-smi`).
-# CPU-only alternative: requirements-cpu.txt
-# Other CUDA / versions: https://pytorch.org/get-started/locally/
-#
-# If you use uv:   uv pip install --index-strategy unsafe-best-match -r requirements.txt
-# (uv otherwise may not mix PyPI + PyTorch index for transitive deps.)
---extra-index-url https://download.pytorch.org/whl/cu121
-torch==2.2.2+cu121
+# Same stack as requirements.txt but CPU-only PyTorch (no NVIDIA GPU).
+# uv: uv pip install --index-strategy unsafe-best-match -r requirements-cpu.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2
 torchtext==0.17.2
 torchdata==0.7.1
 
